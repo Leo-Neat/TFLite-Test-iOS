@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B163BAEA22EF770500285E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BAE922EF770500285E14 /* AppDelegate.swift */; };
+		B163BAEC22EF770500285E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BAEB22EF770500285E14 /* ViewController.swift */; };
+		B163BAEF22EF770500285E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B163BAED22EF770500285E14 /* Main.storyboard */; };
+		B163BAF122EF770600285E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B163BAF022EF770600285E14 /* Assets.xcassets */; };
+		B163BAF422EF770600285E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B163BAF222EF770600285E14 /* LaunchScreen.storyboard */; };
+		B163BAFF22EF770600285E14 /* TFLite_Model_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BAFE22EF770600285E14 /* TFLite_Model_TestTests.swift */; };
+		B163BB0A22EF770600285E14 /* TFLite_Model_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BB0922EF770600285E14 /* TFLite_Model_TestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B163BAFB22EF770600285E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B163BADE22EF770500285E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B163BAE522EF770500285E14;
+			remoteInfo = "TFLite-Model-Test";
+		};
+		B163BB0622EF770600285E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B163BADE22EF770500285E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B163BAE522EF770500285E14;
+			remoteInfo = "TFLite-Model-Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B163BAE622EF770500285E14 /* TFLite-Model-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFLite-Model-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B163BAE922EF770500285E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B163BAEB22EF770500285E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B163BAEE22EF770500285E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B163BAF022EF770600285E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B163BAF322EF770600285E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B163BAF522EF770600285E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B163BAFA22EF770600285E14 /* TFLite-Model-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TFLite-Model-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B163BAFE22EF770600285E14 /* TFLite_Model_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLite_Model_TestTests.swift; sourceTree = "<group>"; };
+		B163BB0022EF770600285E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B163BB0522EF770600285E14 /* TFLite-Model-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TFLite-Model-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B163BB0922EF770600285E14 /* TFLite_Model_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLite_Model_TestUITests.swift; sourceTree = "<group>"; };
+		B163BB0B22EF770600285E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B163BAE322EF770500285E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B163BAF722EF770600285E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B163BB0222EF770600285E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B163BADD22EF770500285E14 = {
+			isa = PBXGroup;
+			children = (
+				B163BAE822EF770500285E14 /* TFLite-Model-Test */,
+				B163BAFD22EF770600285E14 /* TFLite-Model-TestTests */,
+				B163BB0822EF770600285E14 /* TFLite-Model-TestUITests */,
+				B163BAE722EF770500285E14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B163BAE722EF770500285E14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B163BAE622EF770500285E14 /* TFLite-Model-Test.app */,
+				B163BAFA22EF770600285E14 /* TFLite-Model-TestTests.xctest */,
+				B163BB0522EF770600285E14 /* TFLite-Model-TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B163BAE822EF770500285E14 /* TFLite-Model-Test */ = {
+			isa = PBXGroup;
+			children = (
+				B163BAE922EF770500285E14 /* AppDelegate.swift */,
+				B163BAEB22EF770500285E14 /* ViewController.swift */,
+				B163BAED22EF770500285E14 /* Main.storyboard */,
+				B163BAF022EF770600285E14 /* Assets.xcassets */,
+				B163BAF222EF770600285E14 /* LaunchScreen.storyboard */,
+				B163BAF522EF770600285E14 /* Info.plist */,
+			);
+			path = "TFLite-Model-Test";
+			sourceTree = "<group>";
+		};
+		B163BAFD22EF770600285E14 /* TFLite-Model-TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B163BAFE22EF770600285E14 /* TFLite_Model_TestTests.swift */,
+				B163BB0022EF770600285E14 /* Info.plist */,
+			);
+			path = "TFLite-Model-TestTests";
+			sourceTree = "<group>";
+		};
+		B163BB0822EF770600285E14 /* TFLite-Model-TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B163BB0922EF770600285E14 /* TFLite_Model_TestUITests.swift */,
+				B163BB0B22EF770600285E14 /* Info.plist */,
+			);
+			path = "TFLite-Model-TestUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B163BAE522EF770500285E14 /* TFLite-Model-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B163BB0E22EF770600285E14 /* Build configuration list for PBXNativeTarget "TFLite-Model-Test" */;
+			buildPhases = (
+				B163BAE222EF770500285E14 /* Sources */,
+				B163BAE322EF770500285E14 /* Frameworks */,
+				B163BAE422EF770500285E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TFLite-Model-Test";
+			productName = "TFLite-Model-Test";
+			productReference = B163BAE622EF770500285E14 /* TFLite-Model-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B163BAF922EF770600285E14 /* TFLite-Model-TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B163BB1122EF770600285E14 /* Build configuration list for PBXNativeTarget "TFLite-Model-TestTests" */;
+			buildPhases = (
+				B163BAF622EF770600285E14 /* Sources */,
+				B163BAF722EF770600285E14 /* Frameworks */,
+				B163BAF822EF770600285E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B163BAFC22EF770600285E14 /* PBXTargetDependency */,
+			);
+			name = "TFLite-Model-TestTests";
+			productName = "TFLite-Model-TestTests";
+			productReference = B163BAFA22EF770600285E14 /* TFLite-Model-TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B163BB0422EF770600285E14 /* TFLite-Model-TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B163BB1422EF770600285E14 /* Build configuration list for PBXNativeTarget "TFLite-Model-TestUITests" */;
+			buildPhases = (
+				B163BB0122EF770600285E14 /* Sources */,
+				B163BB0222EF770600285E14 /* Frameworks */,
+				B163BB0322EF770600285E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B163BB0722EF770600285E14 /* PBXTargetDependency */,
+			);
+			name = "TFLite-Model-TestUITests";
+			productName = "TFLite-Model-TestUITests";
+			productReference = B163BB0522EF770600285E14 /* TFLite-Model-TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B163BADE22EF770500285E14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Leo Neat";
+				TargetAttributes = {
+					B163BAE522EF770500285E14 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B163BAF922EF770600285E14 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B163BAE522EF770500285E14;
+					};
+					B163BB0422EF770600285E14 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B163BAE522EF770500285E14;
+					};
+				};
+			};
+			buildConfigurationList = B163BAE122EF770500285E14 /* Build configuration list for PBXProject "TFLite-Model-Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B163BADD22EF770500285E14;
+			productRefGroup = B163BAE722EF770500285E14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B163BAE522EF770500285E14 /* TFLite-Model-Test */,
+				B163BAF922EF770600285E14 /* TFLite-Model-TestTests */,
+				B163BB0422EF770600285E14 /* TFLite-Model-TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B163BAE422EF770500285E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B163BAF422EF770600285E14 /* LaunchScreen.storyboard in Resources */,
+				B163BAF122EF770600285E14 /* Assets.xcassets in Resources */,
+				B163BAEF22EF770500285E14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B163BAF822EF770600285E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B163BB0322EF770600285E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B163BAE222EF770500285E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B163BAEC22EF770500285E14 /* ViewController.swift in Sources */,
+				B163BAEA22EF770500285E14 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B163BAF622EF770600285E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B163BAFF22EF770600285E14 /* TFLite_Model_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B163BB0122EF770600285E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B163BB0A22EF770600285E14 /* TFLite_Model_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B163BAFC22EF770600285E14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B163BAE522EF770500285E14 /* TFLite-Model-Test */;
+			targetProxy = B163BAFB22EF770600285E14 /* PBXContainerItemProxy */;
+		};
+		B163BB0722EF770600285E14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B163BAE522EF770500285E14 /* TFLite-Model-Test */;
+			targetProxy = B163BB0622EF770600285E14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B163BAED22EF770500285E14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B163BAEE22EF770500285E14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B163BAF222EF770600285E14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B163BAF322EF770600285E14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B163BB0C22EF770600285E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B163BB0D22EF770600285E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B163BB0F22EF770600285E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PRWMZFPML;
+				INFOPLIST_FILE = "TFLite-Model-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neat.leo.TFLite-Model-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B163BB1022EF770600285E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PRWMZFPML;
+				INFOPLIST_FILE = "TFLite-Model-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neat.leo.TFLite-Model-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B163BB1222EF770600285E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PRWMZFPML;
+				INFOPLIST_FILE = "TFLite-Model-TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neat.leo.TFLite-Model-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFLite-Model-Test.app/TFLite-Model-Test";
+			};
+			name = Debug;
+		};
+		B163BB1322EF770600285E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PRWMZFPML;
+				INFOPLIST_FILE = "TFLite-Model-TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neat.leo.TFLite-Model-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFLite-Model-Test.app/TFLite-Model-Test";
+			};
+			name = Release;
+		};
+		B163BB1522EF770600285E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PRWMZFPML;
+				INFOPLIST_FILE = "TFLite-Model-TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neat.leo.TFLite-Model-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TFLite-Model-Test";
+			};
+			name = Debug;
+		};
+		B163BB1622EF770600285E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PRWMZFPML;
+				INFOPLIST_FILE = "TFLite-Model-TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neat.leo.TFLite-Model-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TFLite-Model-Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B163BAE122EF770500285E14 /* Build configuration list for PBXProject "TFLite-Model-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B163BB0C22EF770600285E14 /* Debug */,
+				B163BB0D22EF770600285E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B163BB0E22EF770600285E14 /* Build configuration list for PBXNativeTarget "TFLite-Model-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B163BB0F22EF770600285E14 /* Debug */,
+				B163BB1022EF770600285E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B163BB1122EF770600285E14 /* Build configuration list for PBXNativeTarget "TFLite-Model-TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B163BB1222EF770600285E14 /* Debug */,
+				B163BB1322EF770600285E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B163BB1422EF770600285E14 /* Build configuration list for PBXNativeTarget "TFLite-Model-TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B163BB1522EF770600285E14 /* Debug */,
+				B163BB1622EF770600285E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B163BADE22EF770500285E14 /* Project object */;
+}
