@@ -56,12 +56,11 @@ class VideoScreenVC: UIViewController {
         textLayer.string = text
         textLayer.fontSize = 20
         textLayer.frame = myFrame
-        textLayer.foregroundColor = UIColor.cyan.cgColor
+        textLayer.foregroundColor = UIColor.black.cgColor
         bbLayer.addSublayer(bb)
         bbLayer.addSublayer(textLayer)
-    
-        
     }
+    
     
     
     override func viewDidLoad() {
@@ -121,7 +120,6 @@ class VideoScreenVC: UIViewController {
         }
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.connection?.videoOrientation = .portrait
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         self.previewLayer = previewLayer
         self.view.layer.addSublayer(self.previewLayer)
@@ -133,7 +131,7 @@ class VideoScreenVC: UIViewController {
         
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.videoSettings = [ String(kCVPixelBufferPixelFormatTypeKey) : kCMPixelFormat_32BGRA]
-        dataOutput.connection(with: .video)?.videoOrientation = .portrait
+        dataOutput.connection(with: .video)?.videoOrientation = AVCaptureVideoOrientation.portrait
         let cameraWorker1 = DispatchQueue(label: "cameraQ")
         dataOutput.alwaysDiscardsLateVideoFrames = true
         dataOutput.setSampleBufferDelegate(self, queue: cameraWorker1)
@@ -146,13 +144,12 @@ class VideoScreenVC: UIViewController {
 
 extension VideoScreenVC: AVCaptureVideoDataOutputSampleBufferDelegate{
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return  }
+        connection.videoOrientation = AVCaptureVideoOrientation.portrait
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
         if(!(modelHandler?.getIsProcessing())!)
         {
             let imageWidth = CVPixelBufferGetWidth(pixelBuffer)
             let imageHeight = CVPixelBufferGetHeight(pixelBuffer)
-        
             
             // Set up bounding box layer for display
             bbLayer.frame = previewLayer.frame
@@ -182,9 +179,12 @@ extension VideoScreenVC: AVCaptureVideoDataOutputSampleBufferDelegate{
             
         }
         DispatchQueue.main.async {
+            self.textLayer.display()
             self.previewLayer.addSublayer(self.bbLayer)
         }
     }
+    
+    
     
     func imageFromSampleBuffer(sampleBuffer : CMSampleBuffer) -> UIImage
     {

@@ -34,6 +34,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
        
         do {
+            print("Setting active model")
            try modelHandler.setActiveModel(modelName: modelHandler.getModelNames()[row])
         }catch ModelNotFound.runtimeError(let errorMessage){
             print(errorMessage)
@@ -51,7 +52,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             WHERE TO ADD NEW MODELS AND THERE CONFIG
             ****************************************
         */
-        modelHandler.addModel(name: "Blurry Text: Total Text", inputDim: 400, labelsPath: "exit-labels.txt", modelPath: "exit_sign_detector.tflite", minConfidence: 0.70)
+        modelHandler.addModel(name: "Blurry Text: Total Text", inputDim: 400, labelsPath: "text-labels.txt", modelPath: "text_detector_blur.tflite", minConfidence: 0.50)
         modelHandler.addModel(name: "Exit Sign Detector", inputDim: 300, labelsPath: "exit-labels.txt", modelPath: "exit_sign_detector.tflite", minConfidence: 0.70)
         do{
             try modelHandler.setActiveModel(modelName: "Blurry Text: Total Text")

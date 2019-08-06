@@ -20,6 +20,8 @@
 		B163BB1C22F0B67200285E14 /* ModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BB1B22F0B67200285E14 /* ModelHandler.swift */; };
 		B163BB2022F203B600285E14 /* exit_sign_detector.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B163BB1F22F203B600285E14 /* exit_sign_detector.tflite */; };
 		B163BB2222F2041E00285E14 /* exit-labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B163BB2122F2041E00285E14 /* exit-labels.txt */; };
+		B163BB2422F4FA5700285E14 /* text-labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B163BB2322F4FA5700285E14 /* text-labels.txt */; };
+		B163BB2622F4FD3500285E14 /* text_detector_blur.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B163BB2522F4FD3400285E14 /* text_detector_blur.tflite */; };
 		DEC85BE58E0F543CD91E5CF1 /* Pods_TFLite_Model_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C9B5775BB9AAF5BBE94C45 /* Pods_TFLite_Model_TestUITests.framework */; };
 		F81FD728093541C158B79A20 /* Pods_TFLite_Model_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED09F6E9E14DAA3B2FF71CB3 /* Pods_TFLite_Model_TestTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		B163BB1B22F0B67200285E14 /* ModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandler.swift; sourceTree = "<group>"; };
 		B163BB1F22F203B600285E14 /* exit_sign_detector.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = exit_sign_detector.tflite; path = Data/TFLiteModels/exit_sign_detector.tflite; sourceTree = "<group>"; };
 		B163BB2122F2041E00285E14 /* exit-labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "exit-labels.txt"; path = "Data/TFLiteLabels/exit-labels.txt"; sourceTree = "<group>"; };
+		B163BB2322F4FA5700285E14 /* text-labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "text-labels.txt"; path = "Data/TFLiteLabels/text-labels.txt"; sourceTree = "<group>"; };
+		B163BB2522F4FD3400285E14 /* text_detector_blur.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = text_detector_blur.tflite; path = Data/TFLiteModels/text_detector_blur.tflite; sourceTree = "<group>"; };
 		BF2ED6B69D739D97B130817A /* Pods-TFLite-Model-TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFLite-Model-TestUITests.debug.xcconfig"; path = "Target Support Files/Pods-TFLite-Model-TestUITests/Pods-TFLite-Model-TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED09F6E9E14DAA3B2FF71CB3 /* Pods_TFLite_Model_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFLite_Model_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC500C9D2E1F0C36AC474E4 /* Pods-TFLite-Model-TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFLite-Model-TestTests.debug.xcconfig"; path = "Target Support Files/Pods-TFLite-Model-TestTests/Pods-TFLite-Model-TestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B163BB2122F2041E00285E14 /* exit-labels.txt */,
+				B163BB2322F4FA5700285E14 /* text-labels.txt */,
 				B163BB1F22F203B600285E14 /* exit_sign_detector.tflite */,
 				B163BAE922EF770500285E14 /* AppDelegate.swift */,
 				B163BAEB22EF770500285E14 /* ViewController.swift */,
@@ -156,6 +161,7 @@
 				B163BB1B22F0B67200285E14 /* ModelHandler.swift */,
 				B163BAED22EF770500285E14 /* Main.storyboard */,
 				B163BAF022EF770600285E14 /* Assets.xcassets */,
+				B163BB2522F4FD3400285E14 /* text_detector_blur.tflite */,
 				B163BAF222EF770600285E14 /* LaunchScreen.storyboard */,
 				B163BAF522EF770600285E14 /* Info.plist */,
 			);
@@ -288,9 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B163BAF422EF770600285E14 /* LaunchScreen.storyboard in Resources */,
+				B163BB2622F4FD3500285E14 /* text_detector_blur.tflite in Resources */,
 				B163BAF122EF770600285E14 /* Assets.xcassets in Resources */,
 				B163BB2222F2041E00285E14 /* exit-labels.txt in Resources */,
 				B163BB2022F203B600285E14 /* exit_sign_detector.tflite in Resources */,
+				B163BB2422F4FA5700285E14 /* text-labels.txt in Resources */,
 				B163BAEF22EF770500285E14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
