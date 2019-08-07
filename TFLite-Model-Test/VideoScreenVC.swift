@@ -36,12 +36,24 @@ class VideoScreenVC: UIViewController {
         }
     }
     
-    func addBB(rect: CGRect, text: String){
-        print("MinX: ", rect.minX)
-        print("MinY: ", rect.minY)
-        print("Width: ", rect.width)
-        print("Height: ", rect.height)
-        let rect = rect.applying(CGAffineTransform(scaleX: self.previewLayer.frame.width, y: self.previewLayer.frame.height))
+    func addBB(rect: CGRect, text: String, origImageWidth: Int, origImageHeight: Int){
+        
+        
+        // Convert the scaling to the preview cropped image, allowing for bounding boxes to be modified
+        //let w2 = Float(previewLayer.frame.width)
+        //let w1 = Float(origImageWidth)
+        let w1 = Float(Float(origImageWidth) / Float(origImageHeight))
+        let w2 = Float(self.previewLayer.frame.width/self.previewLayer.frame.height)
+        let l = Float(rect.minX)
+        let lMax = Float(rect.maxX)
+        let alpha = (( 1 - (w2 / w1)) / 2) * w1
+        let newMinX = CGFloat((l*w1 - alpha)/w2)
+        let newMaxX = CGFloat((lMax*w1 - alpha)/w2)
+        
+        let newRect = CGRect(x: newMinX, y: rect.minY, width: newMaxX - newMinX, height: -(rect.maxY - rect.minY))
+
+        let rect = newRect.applying(CGAffineTransform(scaleX: self.previewLayer.frame.width, y: self.previewLayer.frame.height))
+        
         let bb = CAShapeLayer()
         bb.fillColor = UIColor.clear.cgColor
         bb.lineWidth = 2
@@ -164,7 +176,7 @@ extension VideoScreenVC: AVCaptureVideoDataOutputSampleBufferDelegate{
                 for result in (results!.inferences)
                 {
                     
-                    addBB(rect: result.rect, text: result.className)
+                    addBB(rect: result.rect, text: result.className, origImageWidth: imageWidth, origImageHeight: imageHeight)
                     
                     if(numFound > 10)
                     {

@@ -92,7 +92,7 @@ class ModelHandler{
         print("Labels: ", labelsPath)
         self.modelDim = modelDim
         self.minConf = minConf
-        threadCount = 4
+        threadCount = 6
         
         let (existsModel, modelIOSPath) = ModelHandler.fileExistsCheck(filePath: modelPath)
         if !(existsModel){
@@ -277,6 +277,9 @@ class ModelHandler{
             rect.size.height = abs(CGFloat(boundingBox[4*i]) - CGFloat(boundingBox[4*i+2]))
             rect.size.width = abs(CGFloat(boundingBox[4*i+3]) - CGFloat(boundingBox[4*i+1]))
 
+            
+            let w1 = width
+            let w2 = self
             
             // The detected corners are for model dimensions. So we scale the rect with respect to the
             // actual image dimensions.            
