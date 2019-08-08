@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		785A73B7F0BEF63D36F3A8D1 /* Pods_TFLite_Model_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B632525BA526C892D1EA6A /* Pods_TFLite_Model_Test.framework */; };
+		B11E55CE22FB516B00F92437 /* exit_inception_48k_detector.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B11E55CD22FB516B00F92437 /* exit_inception_48k_detector.tflite */; };
+		B11E55D222FCC3B100F92437 /* VideoScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E55D122FCC3B100F92437 /* VideoScreenVC.swift */; };
+		B11E55D422FCC78000F92437 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E55D322FCC78000F92437 /* MainVC.swift */; };
 		B163BAEA22EF770500285E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BAE922EF770500285E14 /* AppDelegate.swift */; };
-		B163BAEC22EF770500285E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BAEB22EF770500285E14 /* ViewController.swift */; };
 		B163BAEF22EF770500285E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B163BAED22EF770500285E14 /* Main.storyboard */; };
 		B163BAF122EF770600285E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B163BAF022EF770600285E14 /* Assets.xcassets */; };
 		B163BAF422EF770600285E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B163BAF222EF770600285E14 /* LaunchScreen.storyboard */; };
 		B163BAFF22EF770600285E14 /* TFLite_Model_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BAFE22EF770600285E14 /* TFLite_Model_TestTests.swift */; };
 		B163BB0A22EF770600285E14 /* TFLite_Model_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BB0922EF770600285E14 /* TFLite_Model_TestUITests.swift */; };
-		B163BB1822EF874000285E14 /* VideoScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BB1722EF874000285E14 /* VideoScreenVC.swift */; };
-		B163BB1A22EFB0F300285E14 /* TFLiteModelGroupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BB1922EFB0F300285E14 /* TFLiteModelGroupHandler.swift */; };
 		B163BB1C22F0B67200285E14 /* ModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BB1B22F0B67200285E14 /* ModelHandler.swift */; };
 		B163BB2022F203B600285E14 /* exit_sign_detector.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B163BB1F22F203B600285E14 /* exit_sign_detector.tflite */; };
 		B163BB2222F2041E00285E14 /* exit-labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B163BB2122F2041E00285E14 /* exit-labels.txt */; };
@@ -49,9 +49,11 @@
 		54FBA715288ADB4E599DE928 /* Pods-TFLite-Model-TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFLite-Model-TestTests.release.xcconfig"; path = "Target Support Files/Pods-TFLite-Model-TestTests/Pods-TFLite-Model-TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		9550BACA08B54B85161D3960 /* Pods-TFLite-Model-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFLite-Model-Test.release.xcconfig"; path = "Target Support Files/Pods-TFLite-Model-Test/Pods-TFLite-Model-Test.release.xcconfig"; sourceTree = "<group>"; };
 		A73497C15879880DB7B07686 /* Pods-TFLite-Model-TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFLite-Model-TestUITests.release.xcconfig"; path = "Target Support Files/Pods-TFLite-Model-TestUITests/Pods-TFLite-Model-TestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B11E55CD22FB516B00F92437 /* exit_inception_48k_detector.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = exit_inception_48k_detector.tflite; path = Data/TFLiteModels/exit_inception_48k_detector.tflite; sourceTree = "<group>"; };
+		B11E55D122FCC3B100F92437 /* VideoScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoScreenVC.swift; sourceTree = "<group>"; };
+		B11E55D322FCC78000F92437 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B163BAE622EF770500285E14 /* TFLite-Model-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFLite-Model-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B163BAE922EF770500285E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B163BAEB22EF770500285E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B163BAEE22EF770500285E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B163BAF022EF770600285E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B163BAF322EF770600285E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,8 +64,6 @@
 		B163BB0522EF770600285E14 /* TFLite-Model-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TFLite-Model-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B163BB0922EF770600285E14 /* TFLite_Model_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLite_Model_TestUITests.swift; sourceTree = "<group>"; };
 		B163BB0B22EF770600285E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B163BB1722EF874000285E14 /* VideoScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreenVC.swift; sourceTree = "<group>"; };
-		B163BB1922EFB0F300285E14 /* TFLiteModelGroupHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLiteModelGroupHandler.swift; sourceTree = "<group>"; };
 		B163BB1B22F0B67200285E14 /* ModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandler.swift; sourceTree = "<group>"; };
 		B163BB1F22F203B600285E14 /* exit_sign_detector.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = exit_sign_detector.tflite; path = Data/TFLiteModels/exit_sign_detector.tflite; sourceTree = "<group>"; };
 		B163BB2122F2041E00285E14 /* exit-labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "exit-labels.txt"; path = "Data/TFLiteLabels/exit-labels.txt"; sourceTree = "<group>"; };
@@ -155,10 +155,10 @@
 				B163BB2322F4FA5700285E14 /* text-labels.txt */,
 				B163BB1F22F203B600285E14 /* exit_sign_detector.tflite */,
 				B163BAE922EF770500285E14 /* AppDelegate.swift */,
-				B163BAEB22EF770500285E14 /* ViewController.swift */,
-				B163BB1922EFB0F300285E14 /* TFLiteModelGroupHandler.swift */,
-				B163BB1722EF874000285E14 /* VideoScreenVC.swift */,
+				B11E55D322FCC78000F92437 /* MainVC.swift */,
+				B11E55CD22FB516B00F92437 /* exit_inception_48k_detector.tflite */,
 				B163BB1B22F0B67200285E14 /* ModelHandler.swift */,
+				B11E55D122FCC3B100F92437 /* VideoScreenVC.swift */,
 				B163BAED22EF770500285E14 /* Main.storyboard */,
 				B163BAF022EF770600285E14 /* Assets.xcassets */,
 				B163BB2522F4FD3400285E14 /* text_detector_blur.tflite */,
@@ -298,6 +298,7 @@
 				B163BAF122EF770600285E14 /* Assets.xcassets in Resources */,
 				B163BB2222F2041E00285E14 /* exit-labels.txt in Resources */,
 				B163BB2022F203B600285E14 /* exit_sign_detector.tflite in Resources */,
+				B11E55CE22FB516B00F92437 /* exit_inception_48k_detector.tflite in Resources */,
 				B163BB2422F4FA5700285E14 /* text-labels.txt in Resources */,
 				B163BAEF22EF770500285E14 /* Main.storyboard in Resources */,
 			);
@@ -393,11 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B163BAEC22EF770500285E14 /* ViewController.swift in Sources */,
+				B11E55D422FCC78000F92437 /* MainVC.swift in Sources */,
 				B163BB1C22F0B67200285E14 /* ModelHandler.swift in Sources */,
+				B11E55D222FCC3B100F92437 /* VideoScreenVC.swift in Sources */,
 				B163BAEA22EF770500285E14 /* AppDelegate.swift in Sources */,
-				B163BB1A22EFB0F300285E14 /* TFLiteModelGroupHandler.swift in Sources */,
-				B163BB1822EF874000285E14 /* VideoScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

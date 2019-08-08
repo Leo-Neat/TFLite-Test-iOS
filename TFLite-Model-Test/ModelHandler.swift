@@ -22,19 +22,30 @@ enum ModelFileNotFound: Error {
     case runtimeError(String)
 }
 
+struct ModelData
+{
+    let name: String
+    let modelPath: String
+    let labelPath: String
+    let modelDim: Int
+    let minConf: Float
+}
+
+
 class ModelHandler{
     
     /// Information about a model file or labels file.
     typealias FileInfo = (name: String, extension: String)
-    
-    var modelDim: Int           // The dimention of the image passed in
-    var minConf: Double         // The minimum accepted confidence of the model
     
     /// The current thread count used by the TensorFlow Lite Interpreter.
     let threadCount: Int
     
     let resultCount = 3
     let threadCountLimit = 10
+    
+    // Used to calulate the display offset
+    var previewWidth: Float
+    var previewHeight: Float
     
     let batchSize = 1
     let inputChannels = 3
@@ -61,45 +72,34 @@ class ModelHandler{
     
     private let bgraPixel = (channels: 4, alphaComponent: 3, lastBgrComponent: 2)
     private let rgbPixelChannels = 3
-    private let colorStrideValue = 10
-    private let colors = [
-        UIColor.red,
-        UIColor(displayP3Red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0),
-        UIColor.green,
-        UIColor.orange,
-        UIColor.blue,
-        UIColor.purple,
-        UIColor.magenta,
-        UIColor.yellow,
-        UIColor.cyan,
-        UIColor.brown
-    ]
     
     /// TensorFlow Lite `Interpreter` object for performing inference on a given model.
     private var interpreter: Interpreter
     
     /// Information about the alpha component in RGBA data.
     private let alphaComponent = (baseOffset: 4, moduloRemainder: 3)
+    private let currentModel: ModelData
     
     
     // Create a tflite model with the passed in parameters
-    init?(modelName: String, modelDim: Int, labelsPath: String, modelPath: String, minConf: Double) throws {
+    init?(currentModel: ModelData, prevWidth: Float, prevHeight: Float) throws {
+        // Set the number of threads this model can use
+        
+        threadCount = 8
+        self.currentModel = currentModel
+        self.previewWidth = prevWidth
+        self.previewHeight = prevHeight
+        print("Trying to load model with name: ", currentModel.name)
+        print("Path: ", currentModel.modelPath)
+        print("Labels: ", currentModel.labelPath)
         
         
-        
-        print("Trying to load model with name: ", modelName)
-        print("Path: ", modelPath)
-        print("Labels: ", labelsPath)
-        self.modelDim = modelDim
-        self.minConf = minConf
-        threadCount = 6
-        
-        let (existsModel, modelIOSPath) = ModelHandler.fileExistsCheck(filePath: modelPath)
+        let (existsModel, modelIOSPath) = ModelHandler.fileExistsCheck(filePath: currentModel.modelPath)
         if !(existsModel){
             throw ModelFileNotFound.runtimeError("Model file does not exist")
         }
         
-        let (existsLabels, _) = ModelHandler.fileExistsCheck(filePath: labelsPath)
+        let (existsLabels, _) = ModelHandler.fileExistsCheck(filePath: currentModel.labelPath)
         if !(existsLabels){
             throw LabelFileNotFound.runtimeError("Label file does not exist")
         }
@@ -119,10 +119,10 @@ class ModelHandler{
         }
         
         // Load the classes listed in the labels file.
-        let labelsFI: FileInfo = (name: labelsPath.fileName(), extension: labelsPath.fileExtension())
+        let labelsFI: FileInfo = (name: currentModel.labelPath.fileName(), extension: currentModel.labelPath.fileExtension())
         loadLabels(fileInfo: labelsFI)
         
-        print("Successfully loaded model with name: ", modelName)
+        print("Successfully loaded model with name: ", currentModel.name)
     }
 
     
@@ -186,7 +186,7 @@ class ModelHandler{
         assert(imageChannels >= inputChannels)
         
         // Crops the image to the biggest square in the center and scales it down to model dimensions.
-        let scaledSize = CGSize(width: modelDim, height: modelDim)
+        let scaledSize = CGSize(width: currentModel.modelDim, height: currentModel.modelDim)
         guard let scaledPixelBuffer = pixelBuffer.resized(to: scaledSize) else {
             return nil
         }
@@ -202,7 +202,7 @@ class ModelHandler{
             // Remove the alpha component from the image buffer to get the RGB data.
             guard let rgbData = rgbDataFromBuffer(
                 scaledPixelBuffer,
-                byteCount: batchSize * modelDim * modelDim * inputChannels,
+                byteCount: batchSize * currentModel.modelDim * currentModel.modelDim * inputChannels,
                 isModelQuantized: inputTensor.dataType == .uInt8
                 ) else {
                     print("Failed to convert the image buffer to RGB data.")
@@ -261,7 +261,7 @@ class ModelHandler{
             let score = outputScores[i]
             
             // Filters results with confidence < threshold.
-            guard score >= Float(self.minConf) else {
+            guard score >= Float(currentModel.minConf) else {
                 continue
             }
             
@@ -277,9 +277,18 @@ class ModelHandler{
             rect.size.height = abs(CGFloat(boundingBox[4*i]) - CGFloat(boundingBox[4*i+2]))
             rect.size.width = abs(CGFloat(boundingBox[4*i+3]) - CGFloat(boundingBox[4*i+1]))
 
+            // Convert the scaling to the preview cropped image, allowing for bounding boxes to be modified
+
+            let w1 = Float(Float(width) / Float(height))
+            let w2 = Float(self.previewWidth/self.previewHeight)
+            let l = Float(rect.minX)
+            let lMax = Float(rect.maxX)
+            let alpha = (( 1 - (w2 / w1)) / 2) * w1
+            let newMinX = CGFloat((l*w1 - alpha)/w2)
+            let newMaxX = CGFloat((lMax*w1 - alpha)/w2)
             
-            let w1 = width
-            let w2 = self
+            let newRect = CGRect(x: newMinX, y: rect.minY, width: newMaxX - newMinX, height: -(rect.maxY - rect.minY))
+            
             
             // The detected corners are for model dimensions. So we scale the rect with respect to the
             // actual image dimensions.            
@@ -287,7 +296,7 @@ class ModelHandler{
             let colorToAssign = UIColor.green
             let inference = Inference(confidence: score,
                                       className: outputClass,
-                                      rect: rect,
+                                      rect: newRect,
                                       displayColor: colorToAssign)
             resultsArray.append(inference)
         }
