@@ -28,7 +28,7 @@ struct ModelData
     let modelPath: String
     let labelPath: String
     let modelDim: Int
-    let minConf: Float
+    var minConf: Double
 }
 
 

@@ -18,33 +18,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oz-UL-Hi6">
+                                <rect key="frame" x="0.0" y="126" width="414" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QG6-zq-JqC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DpR-cA-fbo"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5in-AI-KR4">
+                                <rect key="frame" x="0.0" y="108" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Minimum Confidence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zky-Bm-O4W">
+                                <rect key="frame" x="20" y="296" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDv-zh-6sv">
+                                <rect key="frame" x="0.0" y="399" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ksG-4N-57d"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QgR-xX-RHP"/>
+                                </connections>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAh-b4-jO8">
-                                <rect key="frame" x="136" y="199" width="143" height="39"/>
+                                <rect key="frame" x="20" y="823" width="374" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Start Detection"/>
                                 <connections>
                                     <segue destination="eqh-x9-IUz" kind="show" identifier="MainToVideoSegue" id="WND-Zj-KKZ"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oz-UL-Hi6">
-                                <rect key="frame" x="0.0" y="367" width="414" height="162"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QG6-zq-JqC"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DpR-cA-fbo"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tAh-b4-jO8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="AHp-Zs-A0g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tAh-b4-jO8" secondAttribute="bottom" id="5YJ-fN-8f4"/>
+                            <constraint firstItem="4oz-UL-Hi6" firstAttribute="top" secondItem="5in-AI-KR4" secondAttribute="bottom" constant="5" id="6eb-mR-BWK"/>
                             <constraint firstItem="4oz-UL-Hi6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dg4-Vq-vKj"/>
+                            <constraint firstItem="5in-AI-KR4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ke9-Db-Gkl"/>
+                            <constraint firstItem="5in-AI-KR4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="THp-gP-lqN"/>
+                            <constraint firstItem="zky-Bm-O4W" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="XWA-AV-CXe"/>
+                            <constraint firstItem="zky-Bm-O4W" firstAttribute="top" secondItem="4oz-UL-Hi6" secondAttribute="bottom" constant="5" id="cD6-RE-QPh"/>
+                            <constraint firstItem="tAh-b4-jO8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="h6v-vs-hQx"/>
+                            <constraint firstItem="sDv-zh-6sv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k7A-Ua-TU4"/>
+                            <constraint firstItem="sDv-zh-6sv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lHb-42-XsG"/>
                             <constraint firstItem="tAh-b4-jO8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o9d-gj-ijd"/>
-                            <constraint firstItem="4oz-UL-Hi6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="okU-wD-9ze"/>
+                            <constraint firstItem="sDv-zh-6sv" firstAttribute="top" secondItem="zky-Bm-O4W" secondAttribute="bottom" constant="5" id="tsZ-zT-Tui"/>
+                            <constraint firstItem="5in-AI-KR4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="usL-IP-C11"/>
+                            <constraint firstItem="4oz-UL-Hi6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yax-i4-9W5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="TF-Lite Model Test" id="eZH-KU-UMq"/>
                     <connections>
+                        <outlet property="confPickerView" destination="sDv-zh-6sv" id="IUv-TW-bSJ"/>
                         <outlet property="pickerView" destination="4oz-UL-Hi6" id="FCN-e2-TCd"/>
                     </connections>
                 </viewController>
