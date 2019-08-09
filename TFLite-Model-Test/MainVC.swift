@@ -81,7 +81,9 @@ class MainVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
         modelArray.append(ModelData(name: "Blurry Text: Total Text", modelPath: "text_detector_blur.tflite", labelPath: "text-labels.txt", modelDim: 400, minConf:  0.50 ))
         modelArray.append(ModelData(name: "Exit Sign Detector", modelPath: "exit_sign_detector.tflite", labelPath: "exit-labels.txt", modelDim: 300, minConf:  0.70 ))
+        
         modelArray.append(ModelData(name: "300 Inception Exit Sign Detector", modelPath: "exit_inception_48k_detector.tflite", labelPath: "exit-labels.txt", modelDim: 300, minConf:  0.50 ))
+        modelArray.append(ModelData(name: "500 Inception Exit Sign Detector", modelPath: "exit_sign_detector_500_71k_steps.tflite", labelPath: "exit-labels.txt", modelDim: 500, minConf:  0.50 ))
         for i in stride(from: 0, to: 1, by: 0.01)
         {
             confArray.append(Float(i))

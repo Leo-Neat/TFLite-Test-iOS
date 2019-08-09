@@ -11,6 +11,8 @@
 		B11E55CE22FB516B00F92437 /* exit_inception_48k_detector.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B11E55CD22FB516B00F92437 /* exit_inception_48k_detector.tflite */; };
 		B11E55D222FCC3B100F92437 /* VideoScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E55D122FCC3B100F92437 /* VideoScreenVC.swift */; };
 		B11E55D422FCC78000F92437 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E55D322FCC78000F92437 /* MainVC.swift */; };
+		B11E55D622FCD9F400F92437 /* exit_sign_detector_500_16k_steps.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B11E55D522FCD9F400F92437 /* exit_sign_detector_500_16k_steps.tflite */; };
+		B11E55DA22FDDDCE00F92437 /* exit_sign_detector_500_71k_steps.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B11E55D922FDDDCE00F92437 /* exit_sign_detector_500_71k_steps.tflite */; };
 		B163BAEA22EF770500285E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163BAE922EF770500285E14 /* AppDelegate.swift */; };
 		B163BAEF22EF770500285E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B163BAED22EF770500285E14 /* Main.storyboard */; };
 		B163BAF122EF770600285E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B163BAF022EF770600285E14 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		B11E55CD22FB516B00F92437 /* exit_inception_48k_detector.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = exit_inception_48k_detector.tflite; path = Data/TFLiteModels/exit_inception_48k_detector.tflite; sourceTree = "<group>"; };
 		B11E55D122FCC3B100F92437 /* VideoScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoScreenVC.swift; sourceTree = "<group>"; };
 		B11E55D322FCC78000F92437 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		B11E55D522FCD9F400F92437 /* exit_sign_detector_500_16k_steps.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = exit_sign_detector_500_16k_steps.tflite; path = Data/TFLiteModels/exit_sign_detector_500_16k_steps.tflite; sourceTree = "<group>"; };
+		B11E55D922FDDDCE00F92437 /* exit_sign_detector_500_71k_steps.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = exit_sign_detector_500_71k_steps.tflite; path = Data/TFLiteModels/exit_sign_detector_500_71k_steps.tflite; sourceTree = "<group>"; };
 		B163BAE622EF770500285E14 /* TFLite-Model-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFLite-Model-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B163BAE922EF770500285E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B163BAEE22EF770500285E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,9 +161,11 @@
 				B163BAE922EF770500285E14 /* AppDelegate.swift */,
 				B11E55D322FCC78000F92437 /* MainVC.swift */,
 				B11E55CD22FB516B00F92437 /* exit_inception_48k_detector.tflite */,
+				B11E55D922FDDDCE00F92437 /* exit_sign_detector_500_71k_steps.tflite */,
 				B163BB1B22F0B67200285E14 /* ModelHandler.swift */,
 				B11E55D122FCC3B100F92437 /* VideoScreenVC.swift */,
 				B163BAED22EF770500285E14 /* Main.storyboard */,
+				B11E55D522FCD9F400F92437 /* exit_sign_detector_500_16k_steps.tflite */,
 				B163BAF022EF770600285E14 /* Assets.xcassets */,
 				B163BB2522F4FD3400285E14 /* text_detector_blur.tflite */,
 				B163BAF222EF770600285E14 /* LaunchScreen.storyboard */,
@@ -303,6 +309,8 @@
 				B163BB2022F203B600285E14 /* exit_sign_detector.tflite in Resources */,
 				B11E55CE22FB516B00F92437 /* exit_inception_48k_detector.tflite in Resources */,
 				B163BB2422F4FA5700285E14 /* text-labels.txt in Resources */,
+				B11E55D622FCD9F400F92437 /* exit_sign_detector_500_16k_steps.tflite in Resources */,
+				B11E55DA22FDDDCE00F92437 /* exit_sign_detector_500_71k_steps.tflite in Resources */,
 				B163BAEF22EF770500285E14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
