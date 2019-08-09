@@ -14,7 +14,10 @@ import CoreMotion
 import AudioToolbox
 
 
-class VideoScreenVC: UIViewController {
+class VideoScreenVC: UIViewController{
+
+    
+    
     
     let photoOutput = AVCapturePhotoOutput()
     let captureSession = AVCaptureSession()
@@ -26,6 +29,7 @@ class VideoScreenVC: UIViewController {
     var textLayer = CATextLayer() // A layer to draw the content of the detected text onto
     var timer = Timer() // Timer for the UI clearing
     var bbLayer = CAShapeLayer()
+    var currentModel: ModelData?
     
     func clearLayer()
     {
@@ -37,22 +41,8 @@ class VideoScreenVC: UIViewController {
     }
     
     func addBB(rect: CGRect, text: String, origImageWidth: Int, origImageHeight: Int){
-        
-        
-        // Convert the scaling to the preview cropped image, allowing for bounding boxes to be modified
-        //let w2 = Float(previewLayer.frame.width)
-        //let w1 = Float(origImageWidth)
-        let w1 = Float(Float(origImageWidth) / Float(origImageHeight))
-        let w2 = Float(self.previewLayer.frame.width/self.previewLayer.frame.height)
-        let l = Float(rect.minX)
-        let lMax = Float(rect.maxX)
-        let alpha = (( 1 - (w2 / w1)) / 2) * w1
-        let newMinX = CGFloat((l*w1 - alpha)/w2)
-        let newMaxX = CGFloat((lMax*w1 - alpha)/w2)
-        
-        let newRect = CGRect(x: newMinX, y: rect.minY, width: newMaxX - newMinX, height: -(rect.maxY - rect.minY))
 
-        let rect = newRect.applying(CGAffineTransform(scaleX: self.previewLayer.frame.width, y: self.previewLayer.frame.height))
+        let rect = rect.applying(CGAffineTransform(scaleX: self.previewLayer.frame.width, y: self.previewLayer.frame.height))
         
         let bb = CAShapeLayer()
         bb.fillColor = UIColor.clear.cgColor
@@ -77,23 +67,19 @@ class VideoScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadActiveModel()
         prepareCamera()
         semaphore.wait()
         isInterupted = false
         semaphore.signal()
+        loadActiveModel()
     }
     
     // Loads the current configuration to the model to be tested and used
     func loadActiveModel() -> Void
     {
-        let name = UserDefaults.standard.string(forKey: TFLiteModelGroupHandler.NAME_TAG)
-        let img_dim = UserDefaults.standard.integer(forKey: TFLiteModelGroupHandler.DIMS_TAG)
-        let model_loc = UserDefaults.standard.string(forKey: TFLiteModelGroupHandler.PATH_TAG)
-        let min_conf = UserDefaults.standard.double(forKey: TFLiteModelGroupHandler.CONF_TAG)
-        let label_path = UserDefaults.standard.string(forKey: TFLiteModelGroupHandler.LABELS_TAG)
+        
         do{
-            try self.modelHandler = ModelHandler(modelName: name!, modelDim: img_dim, labelsPath: label_path! , modelPath: model_loc!, minConf: min_conf)
+            try self.modelHandler = ModelHandler(currentModel: currentModel!, prevWidth: Float(self.previewLayer.frame.width), prevHeight: Float(self.previewLayer.frame.height))
         }catch(ModelFileNotFound.runtimeError( _))
         {
             print("Error, model file passed in does not exist")
@@ -182,7 +168,6 @@ extension VideoScreenVC: AVCaptureVideoDataOutputSampleBufferDelegate{
                     {
                         break
                     }
-                    print("Trying to add bounding box")
                     numFound += 1
                 }
                 
